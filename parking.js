@@ -62,6 +62,7 @@ export class Parking {
       console.log("No parking slot found");
       return false;
     } else {
+      console.log("Parking slot found");
       Object.assign(this.PARK[nrow][ncol], {
         occupied: true,
         vsize: {

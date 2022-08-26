@@ -20,9 +20,9 @@ rl.on("line", (line) => {
       rl.close();
       break;
     case "p":
-      rl.question("Vehicle size [ 0-S, 1-M, 2-L ]: ", function (v) {
+      rl.question("Vehicle Size [ 0-S, 1-M, 2-L ]: ", function (v) {
         let strEntrance = parking.ENTRANCE.map((e) => e.name).join(",");
-        rl.question(`Entrance [${strEntrance}]: `, function (entrance) {
+        rl.question(`Entry Points [${strEntrance}]: `, function (entrance) {
           parking.park(v, entrance);
           rl.prompt();
         });
